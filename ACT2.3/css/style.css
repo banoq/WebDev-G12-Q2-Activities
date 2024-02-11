@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-white: #f3f3f3;
+    --clr-darkBlue: beige;
+    --clr-darkBlue-aplha: rgba(27, 27, 50, 0.8);
+    --clr-green: #37af65;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../img/productsans.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--clr-white);
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url("../img//Itsthefirstdayofmonth.gif");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+h1,
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Improved spacing for checkboxes and added margin-right for label */
+
+input[type="checkbox"] {
+    margin-right: 0.625rem;
+}
+
+input,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    outline: none;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.container {
+    width: 100%;
+    margin-top: 3.125rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+.description {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.text_center {
+    text-align: center;
+}
+
+.clue {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+    color: #e4e4e4;
+}
+
+form {
+    background-color: var(--clr-darkBlue-aplha);
+    padding: 2.5rem 0.625rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 480px) {
+    form {
+        padding: 2.5rem;
+    }
+}
+
+.form_group {
+    margin: 0 auto 1.25 auto;
+    padding: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+.form_control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    color: #495057;
+    padding: 0.375rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    background-clip: padding-box;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form_control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 225, 0.25);
+}
+
+.input_radio,
+.input_checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.input_textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+    border-radius: 0.5rem;
+}
+
+.submit_btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    cursor: pointer;
+    background-color: var(--clr-green);
+    outline: none;
+    color: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.3s linear;
+    font-size: 0.967rem;
+}
+
+.submit_btn:hover {
+    transform: scale(1.05);
+}
+
+.reset_btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    cursor: pointer;
+    background-color: var(--clr-green);
+    outline: none;
+    color: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.3s linear;
+    font-size: 0.967rem;
+}
+
+.reset_btn:hover {
+    transform: scale(1.05);
+}
+
+#data_table {
+    padding: 15px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border: 1px black;
+    color: black;
+    background-color: cornsilk;
+    background-size: 100% 100%;
+    border-collapse: collapse;
+}
+
+#data_table th,
+#data_table td {
+    border: 1px solid black;
+}
+
+#data_table th {
+    background-color: cornflowerblue;
+}
+
+#data_table_body {
+    text-align: center;
+}
+
+#submitted_data_table {
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.hidden {
+    padding: 25px;
+    max-width: 720px;
+}
+
+.submit_btn,
+.reset_btn {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #246964;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.rating_group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.rating_group label {
+    margin-right: 0.5rem;
+}
+
+.rating_group input[type="radio"] {
+    margin-right: 0.25rem;
+}
+
+.submit_btn:hover,
+.reset_btn:hover {
+    background-color: #246964;
+}
+
+.col-md-6 {
+    width: 100%;
+    padding: 0 15px;
+}

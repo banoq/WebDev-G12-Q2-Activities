@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOOMNEP Products Survey Form</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id="title" class="text_center">LOOMNEP Products Survey Form</h1>
+
+            <p id="description" class="description text_center">
+                Thank you for choosing LOOMNEP products! Your feedback is valuable to us as we strive to provide the best in keyboards, mechanical switches, and gaming accessories.
+            </p>
+        </header>
+
+        <!-- Survey Form -->
+
+        <form id="survey_form" autocomplete="off">
+            <!-- Personal Information -->
+            <div class="form_group">
+                <label for="name" id="name_label"> Name </label>
+                <input type="text" name="name" id="name" class="form_control" placeholder="Enter your name" required />
+            </div>
+            <div class="form_group">
+                <label for="email" id="email_label"> Email </label>
+                <input type="email" name="email" id="email" class="form_control" placeholder="Enter your email" required />
+            </div>
+
+            <!-- Age -->
+            <div class="form_group">
+                <label for="number" id="number_label">
+            Age <span class="clue">(Optional)</span>
+          </label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form_control" placeholder="Age" />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form_group">
+                <label for="phone" id="phone_label">Phone Number</label>
+                <input type="tel" name="phone" id="phone" class="form_control" placeholder="Enter your phone number" />
+            </div>
+
+            <!-- Gender -->
+            <div class="form_group">
+                <label for="gender" id="gender_label">Gender</label>
+                <select name="gender" id="gender" class="form_control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+
+            <!-- Product Information -->
+            <div class="form_group">
+                <label for="product" id="product_label">Product Name</label>
+                <select name="product" id="product" class="form_control">
+                    <option value="steno">Steno LOOMNEP Keyboard</option>
+                    <option value="60percent">60% Barebones Keys</option>
+                    <option value="75percent">75% ALY-EX Keyboard</option>
+                    <option value="gamingMouse">RapidFire LOOMNEP Gaming Mouse</option>
+                    <option value="mechanicalSwitch">SwiftTouch LOOMNEP Mechanical Switches</option>
+                    <option value="others">Other..</option>
+                </select>
+            </div>
+
+            <!-- Country -->
+            <div class="form_group">
+                <label for="country" id="country_label">Country</label>
+                <select name="country[]" id="country" class="form_control">
+        <option value="Select a Country (From Asia)"> Select A Country From Asia</option>
+        <option value="brunei">Brunei</option>
+        <option value="cambodia">Cambodia</option>
+        <option value="indonesia">Indonesia</option>
+        <option value="laos">Laos</option>
+        <option value="malaysia">Malaysia</option>
+        <option value="myanmar">Myanmar (Burma)</option>
+        <option value="philippines">Philippines</option>
+        <option value="singapore">Singapore</option>
+        <option value="thailand">Thailand</option>
+        <option value="vietnam">Vietnam</option>
+    </select>
+            </div>
+
+            <!-- Product Rating -->
+            <div class="form_group">
+                <p>Please rate the following aspects of the selected product on a scale of 1 to 5, where 1 is the lowest and 5 is the highest.</p>
+                <label for="quality">Quality:</label>
+                <input type="radio" name="quality" value="1" /> 1
+                <input type="radio" name="quality" value="2" /> 2
+                <input type="radio" name="quality" value="3" /> 3
+                <input type="radio" name="quality" value="4" /> 4
+                <input type="radio" name="quality" value="5" /> 5
+
+                <label for="design">Design:</label>
+                <input type="radio" name="design" value="1" /> 1
+                <input type="radio" name="design" value="2" /> 2
+                <input type="radio" name="design" value="3" /> 3
+                <input type="radio" name="design" value="4" /> 4
+                <input type="radio" name="design" value="5" /> 5
+
+                <label for="usability">Usability:</label>
+                <input type="radio" name="usability" value="1" /> 1
+                <input type="radio" name="usability" value="2" /> 2
+                <input type="radio" name="usability" value="3" /> 3
+                <input type="radio" name="usability" value="4" /> 4
+                <input type="radio" name="usability" value="5" /> 5
+
+                <label for="shipping">Shipping Speed:</label>
+                <input type="radio" name="shipping" value="1" /> 1
+                <input type="radio" name="shipping" value="2" /> 2
+                <input type="radio" name="shipping" value="3" /> 3
+                <input type="radio" name="shipping" value="4" /> 4
+                <input type="radio" name="shipping" value="5" /> 5
+            </div>
+
+            <label for="recommendation">Would you recommend this product to your friends / family? </label>
+            <input type="radio" name="recommendation" value="yes" /> Yes
+            <input type="radio" name="recommendation" value="no" /> No
+
+
+
+
+
+            <!-- Additional Questions -->
+            <div class="form_group">
+                <p>What Tech-Related Products did you purchase in the past year? (Check all that apply) </p>
+                <input type="checkbox" name="otherProducts" value="flashdrive" /> Flash Drive
+                <br>
+                <input type="checkbox" name="otherProducts" value="keyboard" /> Keyboard
+                <br>
+                <input type="checkbox" name="otherProducts" value="mouse" /> Mouse
+                <br>
+                <input type="checkbox" name="otherProducts" value="headphones" /> Headphones / Speaker
+                <br>
+                <input type="checkbox" name="otherProducts" value="digitalSoftware" /> Digital Software
+                <br>
+                <input type="checkbox" name="otherProducts" value="usbPorts" /> USB Ports
+                <br>
+                <input type="checkbox" name="otherProducts" value="switches" /> Mechanical Switches
+            </div>
+
+            <div class="form_group">
+                <label for="experience">How satisfied are you with your overall experience with LOOMNEP products?</label>
+                <input list="satisfactionLevels" name="satisfaction" id="experience" class="form_control" required />
+                <datalist id="satisfactionLevels">
+                    <option value="Very Satisfied" >
+                    <option value="Satisfied">
+                    <option value="Neutral">
+                    <option value="Dissatisfied">
+                    <option value="Very Dissatisfied">
+                </datalist>
+            </div>
+
+            <!-- Feedback -->
+            <div class="form_group">
+                <p>Please provide any additional comments or suggestions regarding the selected product. Your input is highly appreciated.</p>
+                <textarea name="feedback" id="feedback" rows="4" placeholder="Your feedback..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form_group">
+                <button type="submit" class="submit_btn">Submit</button>
+            </div>
+
+            <!-- Reset Button -->
+
+            <button type="reset" class="reset_btn">Reset</button>
+    </div>
+
+
+    </form>
+    </div>
+</body>
+
+</html>

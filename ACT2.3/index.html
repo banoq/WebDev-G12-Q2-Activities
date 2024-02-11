@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOOMNEP Products Survey Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1 id="title">LOOMNEP Products Survey Form</h1>
+            <p id="description" class="description">
+                Thank you for choosing LOOMNEP products! Your feedback is valuable to us as we strive to provide the products in their best quality and price.
+            </p>
+        </header>
+
+        <div class="row">
+            <!-- Survey Form on the left -->
+
+
+            <div class="col-md-6">
+                <!-- Your Survey Form content goes here -->
+
+                <!-- Survey Form (Input Form) -->
+                <form id="survey_form" autocomplete="off" novalidate>
+
+
+                    <!-- Personal Information -->
+                    <div class="form_group">
+                        <label for="name" id="name_label">Name</label>
+                        <input type="text" name="name" id="txtName" class="form_control" placeholder="Enter your name" required />
+                    </div>
+
+                    <div class="form_group">
+                        <label for="email" id="email_label">Email</label>
+                        <input type="email" name="email" id="txtEmail" class="form_control" placeholder="Enter your email" required />
+                    </div>
+
+
+                    <!-- Date -->
+                    <div class="form_group">
+                        <label for="date" id="phone_label">Date</label>
+                        <input type="date" name="date" id="txtDate" class="form_control" required />
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form_group">
+                        <label for="gender" id="gender_label">Gender</label>
+                        <select name="gender" id="selectGender" class="form_control" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                    </div>
+
+                    <!-- Product Information (Select) -->
+                    <div class="form_group">
+                        <label for="product" id="product_label">Product Name</label>
+                        <select name="product" id="selectProduct" class="form_control" required>
+                    <option value="Steno Keys">Steno LOOMNEP Keyboard</option>
+                    <option value="Barebones Keys">60% Barebones Keys</option>
+                    <option value="ALY_EX Keys">75% ALY-EX Keyboard</option>
+                    <option value="Rapid Mouse">RapidFire LOOMNEP Gaming Mouse</option>
+                    <option value="MechanicalSwitches">SwiftTouch LOOMNEP Mechanical Switches</option>
+                    <option value="others">Other..</option>
+                </select>
+                    </div>
+
+                    <!-- Country (Select) -->
+                    <div class="form_group">
+                        <label for="country" id="country_label">Country</label>
+                        <select name="country" id="selectCountry" class="form_control" required>
+                    <option value="Select a Country (From Asia)"> Select A Country From Asia</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Myanmar">Myanmar (Burma)</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Vietnam">Vietnam</option>
+                </select>
+                    </div>
+
+                    <!-- Product Rating (Radio Buttons) -->
+                    <div class="form_group">
+                        <p>Please rate the following aspects of the selected product on a scale of 1 to 5, where 1 is the lowest and 5 is the highest.</p>
+                        <br>
+                        <div class="rating_group" required>
+                            <label for="txtRating">Product Rating:</label>
+                            <input type="radio" name="radioRating" value="1" id="radioRating" required />
+                            <label for="rating1">1</label>
+                            <input type="radio" name="radioRating" value="2" id="radioRating" />
+                            <label for="rating2">2</label>
+                            <input type="radio" name="radioRating" value="3" id="radioRating" />
+                            <label for="rating3">3</label>
+                            <input type="radio" name="radioRating" value="4" id="radioRating" />
+                            <label for="rating4">4</label>
+                            <input type="radio" name="radioRating" value="5" id="radioRating" />
+                            <label for="rating5">5</label>
+                        </div>
+                        <br>
+                        <div class="rating_group" required>
+                            <label for="txtShipping">Shipping Speed:</label>
+                            <input type="radio" name="radioShipping" value="1" id="radioShipping" required />
+                            <label for="shipping1">1</label>
+                            <input type="radio" name="radioShipping" value="2" id="radioShipping" />
+                            <label for="shipping2">2</label>
+                            <input type="radio" name="radioShipping" value="3" id="radioShipping" />
+                            <label for="shipping3">3</label>
+                            <input type="radio" name="radioShipping" value="4" id="radioShipping" />
+                            <label for="shipping4">4</label>
+                            <input type="radio" name="radioShipping" value="5" id="radioShipping" />
+                            <label for="shipping5">5</label>
+                        </div>
+                    </div>
+
+                    <label for="recommendation">Would you recommend this product to your friends / family? </label>
+                    <input type="radio" name="radioRecommendation" value="yes" required /> Yes
+                    <input type="radio" name="radioRecommendation" value="no" required /> No
+
+                    <!-- Additional Questions (Checkboxes) -->
+                    <div class="form_group">
+                        <br>
+
+                        <label for="otherProducts"> What Tech-Related Products did you purchase in the past year? (Check all that apply) </label>
+                        <input type="checkbox" name="otherProducts" value="Flash Drive" /> Flash Drive
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="Keyboard" /> Keyboard
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="Mouse" /> Mouse
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="Headphones" /> Headphones / Speaker
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="Software" /> Digital Software
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="USB Ports" /> USB Ports
+                        <br>
+                        <input type="checkbox" name="otherProducts" value="Switches" /> Mechanical Switches
+                        <br>
+                    </div>
+
+                    <!-- Datalist -->
+                    <div class="form_group">
+                        <label for="experience">How satisfied are you with your overall experience with LOOMNEP products?</label>
+                        <input list="satisfactionLevels" name="satisfaction" id="datalistExperience" class="form_control" required />
+                        <datalist id="satisfactionLevels">
+                        <option value="Excellent"
+                        <option value="Great">
+                        <option value="Very Good">
+                        <option value="Fair">
+                        <option value="Poor">
+                </datalist>
+                    </div>
+
+                    <!-- Feedback -->
+                    <div class="form_group">
+                        <p>Please provide any additional comments or suggestions regarding the selected product. Your input is highly appreciated.</p>
+                        <textarea name="feedback" id="txtareaFeedback" rows="4" placeholder="Your feedback..." required></textarea>
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <div class="form_group">
+                        <button type="button" onclick="submitForm()" class="submit_btn">Submit</button>
+                    </div>
+                    <!-- Reset Button -->
+                    <button type="reset" onclick="resetForm()" class="reset_btn">Reset</button>
+
+                </form>
+            </div>
+
+            <!-- Table on the right -->
+            <div class="col-md-6">
+                <!-- Display Table for Submitted Data -->
+                <div id="submitted_data_table" class="hidden">
+                    <h2>Submitted Data</h2>
+
+                    <table id="data_table" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Date</th>
+                                <th>Gender</th>
+                                <th>Product</th>
+                                <th>Country</th>
+                                <th>Product Rating</th>
+                                <th>Shipping Speed</th>
+                                <th>Recommendation</th>
+                                <th>Other Products</th>
+                                <th>Experience</th>
+                                <th>Feedback</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data_table_body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/table.js"></script>
+
+
+</html>
